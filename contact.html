@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brewster | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h2 class="logo">Brewster</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+
+    <section class="contact-hero">
+      <p class="script">say hi</p>
+      <h1>come find us.<br>or slide into our <span>DMs.</span></h1>
+    </section>
+
+    <section class="contact-cards">
+      <div class="contact-card">
+        <span class="emoji">📍</span>
+        <h3>Our address</h3>
+        <p class="big">In your heart. ❤️</p>
+        <p>(Okay fine, real one: 123 Main Street, Lahore)</p>
+      </div>
+      <div class="contact-card">
+        <span class="emoji">⏰</span>
+        <h3>Open hours</h3>
+        <p class="big">10 AM – 12 AM</p>
+        <p>Late-night coffee? We got you.</p>
+      </div>
+      <div class="contact-card">
+        <span class="emoji">📱</span>
+        <h3>Hit us up</h3>
+        <p class="big">0300-1234567</p>
+        <p>We reply faster than your situationship.</p>
+      </div>
+      <div class="contact-card">
+        <span class="emoji">📸</span>
+        <h3>Follow the vibe</h3>
+        <p class="big">@brewster.cafe</p>
+        <p>Tag us. We might repost you.</p>
+      </div>
+    </section>
+    <section class="map-box">
+      <h2>find us on the map</h2>
+      <iframe
+        src="https://www.google.com/maps?q=Lahore&output=embed"
+        width="100%" height="320" style="border:0; border-radius:14px;"
+        loading="lazy" allowfullscreen
+        title="Brewster location"></iframe>
+    </section>
+    <section class="contact-form-box">
+      <h2>drop us a message</h2>
+      <form id="contact-form">
+        <input type="text" id="c-name" placeholder="your name" required>
+        <textarea id="c-msg" rows="4" placeholder="what's on your mind?" required></textarea>
+        <button type="submit" class="btn-full">Send it ✨</button>
+        <p id="c-thanks"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Brewster. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="features.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('c-thanks').textContent = 'Message received! We\'ll vibe back soon ☕';
+      this.reset();
+    });
+  </script>
+</body>
+</html>

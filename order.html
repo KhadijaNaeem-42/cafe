@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brewster | Order</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h2 class="logo">Brewster</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html" class="active">Order</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="order-page">
+
+    <div class="products">
+      <h2>Place Your Order</h2>
+
+      <input type="text" id="search" class="search-box" placeholder="search your drink or bite...">
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-cat="All">All</button>
+        <button class="filter-btn" data-cat="Espresso">Espresso</button>
+        <button class="filter-btn" data-cat="Iced">Iced</button>
+        <button class="filter-btn" data-cat="Sandwiches">Sandwiches</button>
+      </div>
+
+      <div id="product-list"></div>
+    </div>
+
+    <aside class="cart">
+      <h3>Your Order</h3>
+
+      <div id="cart-items"></div>
+
+      <div class="promo">
+        <input type="text" id="promo-input" placeholder="promo code (try VIBE10)">
+        <button type="button" id="apply-promo">Apply</button>
+      </div>
+      <p id="promo-msg"></p>
+
+      <div class="bill">
+        <div class="bill-row"><span>Subtotal</span><span id="subtotal">Rs. 0</span></div>
+        <div class="bill-row discount" id="discount-row" style="display:none;">
+          <span>Discount (<span id="promo-label"></span>)</span><span id="discount">- Rs. 0</span>
+        </div>
+        <div class="bill-row"><span>Tax (<span id="tax-label"></span>)</span><span id="tax">Rs. 0</span></div>
+        <div class="bill-row total"><span>Total</span><span id="total">Rs. 0</span></div>
+      </div>
+
+      <div class="checkout">
+        <input type="text" id="cust-name" placeholder="Your name">
+        <input type="tel" id="cust-phone" placeholder="Phone number">
+        <select id="order-type">
+          <option value="Dine-in">Dine-in</option>
+          <option value="Takeaway">Takeaway</option>
+          <option value="Delivery">Delivery</option>
+        </select>
+        <textarea id="cust-address" placeholder="Delivery address" rows="2" style="display:none;"></textarea>
+        <p id="error-msg"></p>
+        <button id="place-order" class="btn-full">Place Order</button>
+        <button id="clear-cart" class="btn-link">Clear cart</button>
+      </div>
+    </aside>
+
+  </main>
+
+  <div id="receipt-overlay">
+    <div class="receipt">
+      <h3>Order Placed! ✅</h3>
+      <p id="receipt-info"></p>
+      <div id="receipt-items"></div>
+      <div class="bill-row total"><span>Total</span><span id="receipt-total"></span></div>
+      <p class="thanks">Thank you for ordering from Brewster ☕</p>
+      <button id="close-receipt" class="btn-full">Done</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Brewster. All rights reserved.</p>
+  </footer>
+
+  <script src="order.js"></script>
+  <script src="features.js"></script>
+</body>
+</html>
